@@ -8,3 +8,9 @@ for i in l:
 	print (i,sum);
 
  
+print ('=====================================================');
+
+ll = ['yangjinning','wangfang','yanghaoyuan'];
+
+for str in ll:
+	print (str);
