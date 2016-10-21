@@ -14,3 +14,6 @@ ll = ['yangjinning','wangfang','yanghaoyuan'];
 
 for str in ll:
 	print (str);
+
+
+print (range(10));
