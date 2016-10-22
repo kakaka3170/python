@@ -44,11 +44,13 @@ wp_content = wp.read();
 
 YdnParser = MyParser();
 
-YdnParser.feed(wp_content.decode('unicode'));
+YdnParser.feed(wp_content.decode('GBK'));
 
 
 for hlink in YdnParser.links:
     print (hlink);
 
 pass;
+
+print(len(YdnParser.links));
 
