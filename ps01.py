@@ -16,4 +16,4 @@ for str in ll:
 	print (str);
 
 
-print (range(10));
+print (range(20));
