@@ -1,19 +1,57 @@
 
 from PIL import Image;
 
-from dnlib import dosomething;
-from dnlib import Student; 
 
 
-print ('================ start01.py ===============');
-
-print('call function something()  -- in file start01.py');
-dosomething();
+print ('================ image.py ===============');
 
 im=Image.open('22.png');
 
-#print (im.format,im.size,im.mode);
-im.show();
-print('test object Student');
-yanghaoyuan = Student(1001,'yanghaoyuan',7,'m');
-yanghaoyuan.printinfo();
+print(im.size);
+
+im45 = im.rotate(45);
+
+im45.save('22-45.png');
+
+
+##################################
+box = (500,500,1200,1200);
+region = im.crop(box);
+#region.show();
+
+region45 = region.rotate(45);
+
+im.paste(region45,box)
+
+#im.show();
+
+##################################
+
+def dnoo (i):
+    return i*0.3;
+
+imred = Image.new("RGB",(640,480),(255,0,0));
+imred.point(dnoo);
+
+
+
+for x in range(200,300):
+    imred.putpixel((x,400),(0,233,233));
+    imred.putpixel((x,401),(0,233,233));
+
+imred.show();
+
+
+##################################
+
+r,g,b = im.split();
+r.show();
+g.show();
+b.show();
+
+
+
+
+
+##################################
+
